@@ -140,7 +140,7 @@ public class HashTable<K,V>
     private int getBucketIndex(K key)
     {
         int hashCode = key.hashCode();
-        int index = hashCode % numBuckets;
+        int index = Math.abs((hashCode % numBuckets));
         return index;
     }
 
@@ -152,19 +152,5 @@ public class HashTable<K,V>
     public boolean isEmpty()
     {
         return size == 0;
-    }
-
-    public static void main(String[] args)
-    {
-        HashTable<String, Integer>map = new HashTable<>();
-        map.add("Charizard",1 );
-        map.add("is",2 );
-        map.add("the",4 );
-        map.add("best.",5 );
-        System.out.println(map.getSize());
-        System.out.println(map.remove("Charizard"));
-        System.out.println(map.remove("is"));
-        System.out.println(map.getSize());
-        System.out.println(map.isEmpty());
     }
 }
