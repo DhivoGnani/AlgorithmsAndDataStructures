@@ -20,5 +20,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="AlgorithmsAndDataStructures" />
+    <orderEntry type="module" module-name="DataStructures" />
   </component>
 </module>
